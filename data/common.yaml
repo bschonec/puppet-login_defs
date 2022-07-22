@@ -1,5 +1,11 @@
 # Common defaults
 ---
+
+lookup_options:
+  login_defs::default_options:
+    merge: deep
+
+
 login_defs::mode: '0644'
 login_defs::owner: 'root'
 login_defs::group: '0'
