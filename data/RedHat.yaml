@@ -1,7 +1,7 @@
 # NOTE: 'common_options' gets merged with 'default_options', specified in the
 # version-specific data.
 ---
-login_defs::common_options:
+login_defs::default_options: 
   CREATE_HOME: 'yes'
   ENCRYPT_METHOD: 'SHA512'
   GID_MAX: '60000'
@@ -15,3 +15,12 @@ login_defs::common_options:
   UID_MIN: '1000'
   UMASK: '077'
   USERGROUPS_ENAB: 'yes'
+
+login_defs::useradd_options:
+  GROUP: '100'
+  HOME: '/home'
+  INACTIVE: '-1'
+  EXPIRE: ''
+  SHELL: '/bin/bash'
+  SKEL: '/etc/skel'
+  CREATE_MAIL_SPOOL: 'yes'
