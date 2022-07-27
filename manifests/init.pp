@@ -34,7 +34,6 @@ class login_defs (
   Hash[String, Variant[String, Integer]]           $default_options = {},
   Optional[Hash[String, Variant[String, Integer]]] $common_options  = {},
 ) {
-
   $_merged_options = merge($common_options, $default_options)
   $_config_options = merge($_merged_options, $options)
 
@@ -43,7 +42,6 @@ class login_defs (
     owner   => $owner,
     group   => $group,
     mode    => $mode,
-    content => epp('login_defs/login.defs.epp', {'config_options' => $_config_options}),
+    content => epp('login_defs/login.defs.epp', { 'config_options' => $_config_options }),
   }
-
 }
